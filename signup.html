@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>singup</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./signup.js" defer></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@500&display=swap" rel="stylesheet">
+    <style>
+    body {
+        /* background-color: #191919; */
+        background-color: #CCD1FF;
+    }
+    input {
+        display: block;
+    }
+    * {
+        font-family: 'Sunflower', sans-serif;
+    }
+    </style>
+</head>
+<body>
+    <div class="container mt-5" style="background-color: whitesmoke; border-radius: 1rem;">
+        <!-- ID(정규식) -->
+        <div class="row">
+            <h2 class="text-center mt-3">회 원 가 입</h2>
+            <h4 style="margin-left: 4%; margin-bottom: 1px;">아이디</h4>
+            <input type="text" id="id" class="form-control form-control-lg m-auto mb-1" style="width: 90%;" onblur="idCheck()" placeholder="5~20자 이내로 ID를 입력해주세요">
+            <span id="idResult" style="margin-left: 4%; margin-bottom: 3px;"></span>
+        </div>
+        <!-- PW(정규식) -->
+        <div class="row">
+            <h4 style="margin-left: 4%; margin-bottom: 1px;">비밀번호</h4>
+            <input type="password" id="pw" class="form-control form-control-lg m-auto mt-2" style="width: 90%;" onblur="pwCheck()" placeholder="🔒 8~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요">
+            <span id="pwResult" style="margin-left: 4%; margin-bottom: 3px;"></span>
+        </div>
+        <!-- PW 2차확인(일치여부 출력) -->
+        <div class="row">
+            <input type="password" id="pwConfirm" class="form-control form-control-lg m-auto mt-2" style="width: 90%;" onblur="pwConfirmCheck()" placeholder="🔒 비밀번호 2차확인">
+            <span id="pwConfirmResult" style="margin-left: 4%; margin-bottom: 3px;"></span>
+        </div>
+        <!-- email@select -->
+        <div class="row">
+            <h4 style="margin-left: 4%; margin-bottom: 1px;">이메일</h4>
+            <input type="text" id="email" class="form-control form-control-lg mt-2" style="width: 40%; margin-left: 5%;" onblur="emailCheck()" placeholder="이메일을 입력해주세요">
+            <img src="./images/icons/at.svg" alt="" style="margin-top: 10px; width: 53px; height: 53px;">
+            <!-- <select id="domain" class="form-select form-select-sm" style="width: 40%;" onchange="domainCheck()">
+                <option value="naver.com"></option>
+            </select> -->
+            <select id="domail" class="form-select mt-2" style="width: 46%; height: 60px;">
+                <!-- 600px -->
+                <option selected>선택해주세요</option>
+                <option value="@naver.com">naver.com</option>
+                <option value="@gmail.com">gmail.com</option>
+                <option value="@daum.net">daum.net</option>
+                <option value="@nate.com">nate.com</option>
+                <option value="@kakao.com">kakao.com</option>
+                <option value="@hanmail.net">hanmail.net</option>
+            </select>
+              <span id="emailConfirm" style="margin-left: 4%; margin-bottom: 5px;"></span>
+        </div>
+        <!-- 전화번호 -->
+        <div class="row">
+            <input type="text" class="form-control form-control-lg m-auto mb-1" id="phone" style="width: 90%;" onblur="phoneCheck()" placeholder="전화번호를 입력해주세요  ex)010-XXXX-XXXX">
+            <span id="phone-check-result" style="margin-left: 4%; margin-bottom: 3px;"></span>
+        </div>
+        <!-- gender(radio button) -->
+        <div class="row">
+            <h4 style="margin-left: 4%; margin-bottom: 1px;">성별</h4>
+            <!-- <div class="form-check form-check-inline" style="margin-left: 5%;">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="M">
+                <label class="form-check-label" for="inlineRadio1" style="font-size: 18pt;">남자 (Male)</label>
+              </div>
+              <div class="form-check form-check-inline" style="margin-left: 5%;">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="F">
+                <label class="form-check-label" for="inlineRadio2" style="font-size: 18pt;">여자 (Female)</label>
+              </div>
+              <div class="form-check form-check-inline mb-5" style="margin-left: 5%;">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="U">
+                <label class="form-check-label" for="inlineRadio3" style="font-size: 18pt;">선 택 안 함</label>
+              </div> -->
+        </div>
+        <div class="btn-group mb-2" style="width: 92%; margin-left: 4%;" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+            <label class="btn btn-outline-danger" for="btnradio1">선택안함</label>
+          
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+            <label class="btn btn-outline-danger" for="btnradio2">남자 (Male)</label>
+          
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+            <label class="btn btn-outline-danger" for="btnradio3">여자 (Female)</label>
+        </div>
+        <!-- address(Daum API) -->
+        <div class="row">
+            <!-- <input type="button" class="btn btn-outline-waring" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"> -->
+            <button type="button" class="btn btn-outline-warning m-auto mb-2 text-dark" style="width: 90%" onclick="DaumPostcode()">주소 찾기</button>
+            <input type="text" class="form-control m-auto mb-2 text-center" id="address" style="width: 90%;" disabled>
+            <input type="text" class="form-control m-auto mb-1 text-center" id="detailAddress" style="width: 90%;" onblur="address()" placeholder="상세주소 입력">
+            <span id="addressConfirm" style="margin-left: 4%; margin-bottom: 5px;"></span>
+        </div>
+        <!-- 가입 완료 버튼 -->
+        <div class="row">
+            <button type="button" class="btn btn-outline-success m-auto mb-5" style="width: 90%;">가입하기</button>
+        </div>
+    </div>
+</body>
+</html>
