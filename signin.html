@@ -21,7 +21,7 @@
     </style>
 </head>
 <body>
-    <div class="container mt-5" style="background-color: whitesmoke; border-radius: 1rem;">
+    <!-- <div class="container mt-5" style="background-color: whitesmoke; border-radius: 1rem;">
         <div class="row">
             <h2 class="text-center mt-3">로 그 인</h2>
             <input type="text" id="id" class="form-control form-control-lg m-auto mb-1 mt-3" style="width: 90%;"  placeholder="아이디">
@@ -37,6 +37,31 @@
             <button type="button" class="btn btn-outline-success m-auto mb-5" style="width: 90%;" onclick="location.href='./signup.html'">회원가입</button>
         </div>
         </div>
+    </div> -->
+    
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Sign In
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">로 그 인</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text" id="id" class="form-control mb-2" placeholder="ID를 입력하세요">
+          <input type="password" id="pw" class="form-control" placeholder="PW를 입력하세요">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger text-dark" data-bs-dismiss="modal">취 소</button>
+          <button type="button" class="btn btn-warning text-dark">로 그 인</button>
+        </div>
+      </div>
     </div>
+  </div>
 </body>
 </html>

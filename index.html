@@ -51,9 +51,33 @@
                 <a href="./index.html" class="nav-link text-dark">O J S ' s F r o n t E n d</a>
             </ul>
             <div class="d-flex">
-                <input type="text" class="form-control" placeholder="Search">
-                <button class="btn btn-link text-light text-decoration-none flex-shrink-0 text-dark" onclick="location.href='./signin.html'">Sign in</button>
-                <button class="btn btn-outline-light flex-shrink-0 text-dark" onclick="location.href='./signup.html'">Sign up</button>
+                <input type="text" class="form-control" style="margin-right: 5px;" placeholder="Search">
+                <!-- <button class="btn btn-link text-light text-decoration-none flex-shrink-0 text-dark" onclick="location.href='./signin.html'">Sign in</button> -->
+                <button type="button" class="btn btn-danger flex-shrink-0" style="margin-right: 5px" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Sign In
+                  </button>
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">로 그 인</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <input type="text" id="id" class="form-control mb-2" placeholder="ID를 입력하세요">
+                          <input type="password" id="pw" class="form-control" placeholder="PW를 입력하세요">
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger text-light" data-bs-dismiss="modal">취 소</button>
+                          <button type="button" class="btn btn-warning text-dark">로 그 인</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!-- <button class="btn btn-outline-light flex-shrink-0 text-dark" onclick="location.href='./signup.html'">Sign up</button> -->
+                <button class="btn btn-warning flex-shrink-0" onclick="location.href='./signup.html'">Sign Up</button>
             </div>
             <!-- data-bs-target="#offcanvas" : offcanvas에서 보여줄 내용(id가 offcanvas로 지정된 요소를 보여주겠다.) -->
             <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">
@@ -82,10 +106,33 @@
                     <input type="text" class="form-control mb-2" placeholder="Search">
                     <!-- d-grid : 해당요소를 한줄에 채워서 표시할 수 있음. -->
                     <div class="d-grid mb-2">
-                        <button class="btn btn-outline-primary" onclick="location.href='./signin.html'">Sign In</button>
+                        <button type="button" class="btn btn-danger" style="margin-right: 5px" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Sign In
+                          </button>
+                          
+                          <!-- Modal -->
+                          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">로 그 인</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <input type="text" id="id" class="form-control mb-2" placeholder="ID를 입력하세요">
+                                  <input type="password" id="pw" class="form-control" placeholder="PW를 입력하세요">
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-danger text-light" data-bs-dismiss="modal">취 소</button>
+                                  <button type="button" class="btn btn-warning text-dark">로 그 인</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                     </div>
                     <div class="d-grid">
-                        <button class="btn btn-primary" onclick="location.href='./signup.html'">Sign Up</button>
+                        <!-- <button class="btn btn-primary" onclick="location.href='./signup.html'">Sign Up</button> -->
+                        <button class="btn btn-warning" onclick="location.href='./signup.html'">Sign Up</button>
                     </div>
                 </div>
             </div>
