@@ -88,25 +88,25 @@
         </div>
         <div class="btn-group mb-2" style="width: 92%; margin-left: 4%;" role="group" aria-label="Basic radio toggle button group">
             <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-            <label class="btn btn-outline-danger" for="btnradio1">선택안함</label>
+            <label class="btn btn-outline-warning text-dark" for="btnradio1">선택안함</label>
           
             <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-            <label class="btn btn-outline-danger" for="btnradio2">남자 (Male)</label>
+            <label class="btn btn-outline-warning text-dark" for="btnradio2">남자 (Male)</label>
           
             <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-            <label class="btn btn-outline-danger" for="btnradio3">여자 (Female)</label>
+            <label class="btn btn-outline-warning text-dark" for="btnradio3">여자 (Female)</label>
         </div>
         <!-- address(Daum API) -->
         <div class="row">
-            <!-- <input type="button" class="btn btn-outline-waring" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"> -->
-            <button type="button" class="btn btn-outline-warning m-auto mb-2 text-dark" style="width: 90%" onclick="DaumPostcode()">주소 찾기</button>
+            <!-- <input type="button" class="btn btn-outline-warning" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"> -->
+            <button type="button" class="btn btn-danger m-auto mb-2" style="width: 90%" onclick="DaumPostcode()">주소 찾기</button>
             <input type="text" class="form-control m-auto mb-2 text-center" id="address" style="width: 90%;" disabled>
             <input type="text" class="form-control m-auto mb-1 text-center" id="detailAddress" style="width: 90%;" onblur="address()" placeholder="상세주소 입력">
             <span id="addressConfirm" style="margin-left: 4%; margin-bottom: 5px;"></span>
         </div>
         <!-- 가입 완료 버튼 -->
         <div class="row">
-            <button type="button" class="btn btn-outline-success m-auto mb-5" style="width: 90%;">가입하기</button>
+            <button type="button" class="btn btn-success m-auto mb-5" style="width: 90%;">가입하기</button>
         </div>
     </div>
 </body>
