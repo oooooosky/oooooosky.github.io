@@ -4,167 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>oooooosky</title>
+    <title>오제리</title>
     <link rel="stylesheet" href="./ooosky.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./ooosky.js"></script>
 </head>
 <body>
-    
-<header>
-    <div>
-        <div class="logo">
-            <img src="/images/ooosky.png" class="logo" alt="">
-        </div>
-        <div class="div_padding">
-            <a href="https://velog.io/@ohjs813" target="_blank">Velog</a>
-            <a href="mailto:ohjs813@gmail.com">Email</a>
-        </div>
-    </div>
-</header>
-
-<div class="content  fade_in">
-    
-    <div class="content_box">
-        <div class="content_header">
-            <div class="circle">
-                <img src="/images/soriclear.webp" alt="">
+    <header>
+        <div class="header_div">
+            <svg onclick="goVel()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+            </svg>
+            <div class="flex_column ml15">
+                <span class="name">velog로</span>
+                <span class="subname">@Autowired</span>
             </div>
-            <span class="project_name">Sori Clear</span>
         </div>
-        <div class="discription">
-            <span>이명 치료 서비스</span>
-            <li>인원 : 2명</li>
-            <li>Java, Flutter</li>
-            <li>DB : MySql</li>
-            <br>
-            <span>맡은 역할</span>
-            <li>사용자 및 관리자용 DB 설계 및 생성</li>
-            <li>Fcm Notification 개발</li>
-            <li>API 개발 및 앱 개발 & 관리자 웹 개발</li>
-        </div>
-    </div>
-
-    <div class="content_box">
-        <div class="content_header">
-            <div class="circle">
-                <img src="/images/vdp.webp" alt="">
+    </header>
+    <div class="body_div">
+        <div class="profile">
+            <div class="profile_back"></div>
+            <div class="profile_img">
+                <img src="./images/doaga.jpg" alt="">
             </div>
-            <span class="project_name">마음건강</span>
-        </div>
-        <div class="discription">
-            <span>마음건강 관리 서비스</span>
-            <li>인원 : 4명</li>
-            <li>Java, Flutter</li>
-            <li>DB : MySql</li>
-            <br>
-            <span>맡은 역할</span>
-            <li>사용자 및 관리자용 DB 설계 및 생성</li>
-            <li>Fcm Notification 개발</li>
-            <li>API 개발 및 앱 개발 & 관리자 웹 개발</li>
-        </div>
-    </div>
-
-    <div class="content_box">
-        <div class="content_header">
-            <div class="circle">
-                <img src="/images/ven.webp" alt="">
+            <div class="profile_name flex_column ">
+                <span class="name">@오지석</span>
+                <span class="subname" onclick="goTel()">01022564291</span>
+                <div class="info_div">
+                    <span class="info">생일 : 1999년 8월 13일</span>
+                    <span class="info">경력 1년</span>
+                </div>
             </div>
-            <span class="project_name">벤브라더스</span>
         </div>
-        <div class="discription">
-            <span>각종 키오스크 및 예약, 주문 확인용 시스템</span>
-            <li>인원 : 4명</li>
-            <li>Node.js, React, React Native, Prisma</li>
-            <li>DB : Postgresql</li>
-            <br>
-            <span>맡은 역할</span>
-            <li>DB 설계 및 생성</li>
-            <li>Fcm Notification 개발</li>
-            <li>API 개발 및 앱 개발 & 관리자 웹 개발</li>
-            <li>비즈뿌리오를 이용한 카카오톡 알림톡 서비스 개발</li>
-            <li>Android Alarm Manager를 이용한 forward cron 개발</li>
+        <div class="h_20"></div>
+        <div class="body_main">
+            
         </div>
     </div>
-
-    <div class="content_box">
-        <div class="content_header">
-            <div class="circle">
-                <img src="/images/tourbutton.webp" alt="">
-            </div>
-            <span class="project_name">여행버튼</span>
-        </div>
-        <div class="discription">
-            <span>여행 SNS 및 공모전 서비스</span>
-            <li>인원 : 2명</li>
-            <li>CakePhp</li>
-            <li>DB : php admin</li>
-            <br>
-            <span>맡은 역할</span>
-            <li>사용자 및 관리자용 DB 설계 및 생성</li>
-            <li>Fcm Notification 개발</li>
-            <li>API 개발 및 앱 개발 & 사용자, 관리자 웹 개발</li>
-        </div>
-    </div>
-
-    <div class="content_box">
-        <div class="content_header">
-            <div class="circle">
-                <img src="/images/andee.png" alt="">
-            </div>
-            <span class="project_name">퍼블버블</span>
-        </div>
-        <div class="discription">
-            <span>템플릿 생성 및 공유 서비스</span>
-            <li>인원 : 2명</li>
-            <li>CakePhp</li>
-            <li>DB : php admin</li>
-            <br>
-            <span>맡은 역할</span>
-            <li>사용자 웹 페이지 고도화 (디자인 및 추가기능 개발)</li>
-        </div>
-    </div>
-
-    <div class="content_box">
-        <div class="content_header">
-            <div class="circle">
-                <img src="/images/room.webp" alt="">
-            </div>
-            <span class="project_name">룸 앤 베드</span>
-        </div>
-        <div class="discription">
-            <span>한인민박 예약 서비스</span>
-            <li>인원 : 3명</li>
-            <li>LaravelPhp</li>
-            <li>DB : MariaDB</li>
-            <br>
-            <span>맡은 역할</span>
-            <li>알림 관련 DB 설계 및 생성</li>
-            <li>Fcm Notification 개발</li>
-            <li>사용자 웹 페이지 고도화 (디자인 및 추가기능 개발)</li>
-        </div>
-    </div>
-
-    <div class="content_box">
-        <div class="content_header">
-            <div class="circle">
-                <img src="/images/hybe.webp" alt="">
-            </div>
-            <span class="project_name">Hybe LightStick SDK</span>
-        </div>
-        <div class="discription">
-            <span>Hybe 응원봉 제어 SDK<br>- NewJeans, Lesserafim 등</span>
-            <li>인원 : 4명</li>
-            <li>Flutter</li>
-            <br>
-            <span>맡은 역할</span>
-            <li>각 아티스트 대응 (LESSERAFIM, NEWJEANS 등) 기반 어플 디자인 및 개발</li>
-            <li>공연정보, 좌석정보, 좌석정보 종속성 등 응원봉 관련 기능 개발</li>
-        </div>
-    </div>
-
-</div>
 
 </body>
 </html>
