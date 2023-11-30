@@ -1,4 +1,5 @@
 let project_list = ["소리클리어", "마음건강", "워킹카우 벤브라더스", "여행버튼", "퍼블버블", "룸앤베드", "하이브"];
+let project_img = ["soriclear.webp", "vdp.webp", "ven.webp", "tourbutton.webp", "andee.png", "room.webp", "hybe.webp"];
 let project_info = [
     "이명 치료 서비스",
     "마음병 건강관리 서비스",
@@ -15,6 +16,7 @@ let project_role = ["", "", "", "", "", "", ""];
 
 let content = "";
 
+
 const goVel = () => {
     let a= document.createElement('a');
     a.target= '_blank';
@@ -30,13 +32,16 @@ const goTel = () => {
 }
 
 const getPage = () => {
-    console.log("getPage start");
-    console.log($('.body_main'));
+    let body_main = document.getElementById("body_main");
     for(let i = 0; i < project_list.length; i++) {
+        content += "<div class= 'project'>"
+        content += "<div class = 'project_name'>"
+        content += "<div class='project_img'><img src = /images/" + project_img[i] +"></div>"
         content += "<span>"+project_list[i]+"</span>";
+        content += "</div>"
+        content += "</div>"
     }
-    $(".body_main")
-    console.log("getPage end");
+    body_main.innerHTML = content;
 }
 
 $(document).ready(function () {
